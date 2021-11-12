@@ -1,0 +1,10 @@
+.page-header {
+    background-image: url('images/home-header.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    padding: 4rem 0;
+    color: white;
+    text-shadow: 3px 2px 5px black;
+    font-size: 4rem;
+}

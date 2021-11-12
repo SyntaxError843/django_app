@@ -1,7 +1,9 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %} {% block title %} Storefront | Shop {% endblock %} {% block content %} {% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'shop/style.css' %}">
+<div class="page-header w-full flex items-center justify-center uppercase tracking-wider">
+    Shop
+</div>
 <div class="w-9/12 md:w-7/12 bg-white rounded-lg mt-4 mx-auto p-4">
-    <h1 class="text-xl uppercase font-bold text-center mb-4">Shop</h1>
-
     <div class="flex flex-wrap items-center content-center p-4">
         {% if latest_products %} {% for product in latest_products %}
 
