@@ -26,5 +26,8 @@ class Product( models.Model ) :
     );
     created_at  = models.DateTimeField( 'date created', auto_now_add = True );
 
+    # Product image field
+    featured_image = models.ImageField( upload_to = 'images/%Y/%m', default = '' );
+
     def __str__(self):
         return self.title
