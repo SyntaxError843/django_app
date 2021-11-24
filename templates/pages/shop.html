@@ -4,14 +4,17 @@
     Shop
 </div>
 <div class="w-9/12 md:w-7/12 bg-white rounded-lg mt-4 mx-auto p-4">
-    <div class="flex flex-wrap items-center content-center">
+    <div class="flex flex-wrap items-center content-center justify-between">
         {% if latest_products %} {% for product in latest_products %}
 
-        <a href="#" class="w-4/12 p-4 mr-4 shadow-md border-2 border-black rounded flex flex-col content-center items-center hover:bg-gray-50 hover:border-red-200 cursor-pointer transition">
-            <div class="text-lg font-semibold">{{ product.title }}</div>
-            <div class="mb-4 text-xs">{{ product.sku }}</div>
-            <div class="mb-2 text-sm font-bold text-green-500">{{ product.price }} {{ product.currency }}</div>
-            <div class="mt-2 text-xs italic text-center">published at:<br>{{ product.created_at }}</div>
+        <a href="#" class="product-block mb-4 shadow-md border-2 border-black rounded hover:bg-gray-50 hover:border-red-200 cursor-pointer transition">
+            <!-- <div class="w-full" style="background-image: url( {{ product.featured_image.url }} )"></div> -->
+            <div class="w-full p-4 flex flex-col items-center content-center">
+                <div class="text-lg font-semibold">{{ product.title }}</div>
+                <div class="mb-4 text-xs">{{ product.sku }}</div>
+                <div class="mb-2 text-sm font-bold text-green-500">{{ product.price }} {{ product.currency }}</div>
+                <div class="mt-2 text-xs italic text-center">published at:<br>{{ product.created_at }}</div>
+            </div>
         </a>
 
         {% endfor %} {% else %}
